@@ -22,9 +22,25 @@ namespace Leetspeak
         // replace e with 3
         for (int i=0; i<originalArray.Length; i++)
         {
-          if (originalArray[i] == 'e')
+          if (originalArray[i] == 'e' || originalArray[i] == 'E')
           {
             translatedArray[i] = '3';
+          }
+          else if (originalArray[i] == 'o' || originalArray[i] == 'O')
+          {
+            translatedArray[i] = '0';
+          }
+          else if (originalArray[i] == 'I')
+          {
+            translatedArray[i] = '1';
+          }
+          else if (originalArray[i] == 't' || originalArray[i] == 'T')
+          {
+            translatedArray[i] = '7';
+          }
+          else if ((i != 0 && originalArray[i] == 's') || (i != 0 && originalArray[i] == 'S'))
+          {
+            translatedArray[i] = 'z';
           }
           else
           {
@@ -42,8 +58,10 @@ namespace Leetspeak
   {
     public static void Main()
     {
+      Console.WriteLine("Enter a sentence.");
+      string userInput = Console.ReadLine();
       LeetspeakTranslator translator = new LeetspeakTranslator();
-      translator.Translate("something");
+      Console.WriteLine(translator.Translate(userInput));
     }
   }
 }
