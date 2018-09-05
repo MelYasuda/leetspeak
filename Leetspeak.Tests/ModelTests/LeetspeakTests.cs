@@ -13,12 +13,11 @@ namespace Leetspeak.Tests
       LeetspeakTranslator translator = new LeetspeakTranslator();
       Assert.AreEqual("Invalid input", translator.Translate(""));
     }
-    // [TestMethod]
-    // public void Translate_SplitUserInput()
-    // {
-    //   LeetspeakTranslator translator = new LeetspeakTranslator();
-    //   Assert.AreEqual("Invalid input", translator.Translate(""));
-    //   Assert.AreEqual("something", translator.Translate("something"));
-    // }
+    [TestMethod]
+    public void Translate_ReplaceEWith3()
+    {
+      LeetspeakTranslator translator = new LeetspeakTranslator();
+      Assert.AreEqual("3", translator.Translate("e"));
+    }
   }
 }

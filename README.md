@@ -11,26 +11,26 @@
 3. The program makes a new result array to store translated letters.
   output > ["", "", "", "", ""]
 
-4. The program should replace "e" with 3.
+4. The program concatenates items in translated letters array to make a new string and returns the string as an output.
+
+5. The program should replace "e" with 3.
   input > "e"
   output > "3"
 
-5. The program should replace "o" with 0.
+6. The program should replace "o" with 0.
   input > "o"
   output > "0"
 
-6. The program should replace I with 1.
+7. The program should replace I with 1.
   input > "I"
   output > "1"
 
-7. The program should replace t with 7.
+8. The program should replace t with 7.
   input > "t"
   output > "7"
 
-8. The program should replace s with z unless it is the first letter of the string.
+9. The program should replace s with z unless it is the first letter of the string.
   input > "Es"
   output > "Ez"
   input > "s"
   output > "s"
-
-9. The program concatenates translated letters to make a new string and returns the string as an output.

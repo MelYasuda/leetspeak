@@ -14,13 +14,27 @@ namespace Leetspeak
       }
       else
       {
-        char[] array = userInput.ToCharArray();
+        char[] originalArray = userInput.ToCharArray();
 
-        foreach (char item in array) {
-          Console.WriteLine(item);
+        int userInputLength = originalArray.Length;
+        char[] translatedArray = new char[userInputLength];
+
+        // replace e with 3
+        for (int i=0; i<originalArray.Length; i++)
+        {
+          if (originalArray[i] == 'e')
+          {
+            translatedArray[i] = '3';
+          }
+          else
+          {
+            translatedArray[i] = originalArray[i];
+          }
         }
 
-        return userInput;
+        string result = new string(translatedArray);
+
+        return result;
       }
     }
   }
